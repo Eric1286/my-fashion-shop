@@ -1,0 +1,20 @@
+@import "../../_variables.scss";
+.form {
+  margin: 8rem auto;
+  width: 40%;
+  padding: 2rem 2rem;
+  box-shadow: 0px 0px 1.5px 1.5px rgb(238, 233, 233);
+  border-radius: 10px;
+}
+.icon__container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.icon {
+  text-align: center;
+  padding: 8px 8px;
+  background-color: map-get($color, main);
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 50px;
+}

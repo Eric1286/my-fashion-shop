@@ -1,0 +1,114 @@
+@import "../../_variables.scss";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: $header--height;
+  padding: 0 3rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  @include Responsive(smartphone) {
+    padding: 0 0.5rem;
+  }
+  @include Responsive(tablet) {
+    padding: 0 2rem;
+  }
+  .nav__logo {
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+    font-weight: bold;
+    color: map-get($color, main);
+    @include Responsive(smartphone) {
+      display: none;
+    }
+    @include Responsive(tablet) {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: map-get($color, main);
+  @include Responsive(pc) {
+    display: none;
+  }
+}
+.nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style-type: none;
+    color: black;
+    padding: 0;
+  }
+  li {
+    text-decoration: none;
+  }
+  @include Responsive(smartphone) {
+    display: none;
+  }
+  @include Responsive(tablet) {
+    display: none;
+  }
+}
+.link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    color: map-get($color, main) !important;
+  }
+}
+.active {
+  color: map-get($color, main);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+  padding: 2rem 0;
+  text-align: center;
+  .nav__logo {
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: map-get($color, main);
+    &:hover {
+      color: rgb(241, 137, 137);
+    }
+  }
+  ul {
+    margin: 2rem 0;
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 0.5rem 0;
+    &:hover {
+      border-left: 2px solid map-get($color, main);
+    }
+  }
+}

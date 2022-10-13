@@ -1,0 +1,100 @@
+@import "../../_variables.scss";
+
+.product {
+  width: 90%;
+  margin: $header--height auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.4rem;
+  @include Responsive(smartphone) {
+    flex-direction: column;
+  }
+}
+.product__preview {
+  width: 50%;
+  text-align: center;
+  img {
+    width: 400px;
+    height: 400px;
+    @include Responsive(smartphone) {
+      width: 300px;
+      height: 300px;
+    }
+    @include Responsive(tablet) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+.product__overview {
+  width: 50%;
+  @include Responsive(smartphone) {
+    width: 100%;
+  }
+}
+.product__category {
+  color: rgb(96, 111, 122);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.product__name {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin-bottom: 7px;
+}
+.product__rating {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.rate__icon {
+  vertical-align: baseline;
+  padding-left: 4px;
+  color: rgb(223, 223, 53);
+}
+.product__price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.product__desc {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.btn {
+  margin-left: 10px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-family: "Gantari", sans-serif;
+  border-radius: 10px;
+}
+.product__btn {
+  @extend .btn;
+  cursor: pointer;
+  border: 1.5px solid rgb(37, 20, 20);
+  color: black;
+  background-color: white;
+  &:hover {
+    border: 1.5px solid white;
+    color: white;
+    background-color: black;
+  }
+}
+.product__link {
+  @extend .btn;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid white;
+  color: white;
+  background-color: black;
+  &:hover {
+    border: 1.5px solid rgb(37, 20, 20);
+    color: black;
+    background-color: white;
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../_variables.scss";
+.main {
+  margin-top: $header--height;
+}
+
+.section--1 {
+  padding-top: 1rem;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: map-get($color, main);
+    letter-spacing: 2px;
+  }
+  @include Responsive(tablet) {
+    padding: 0 50px;
+  }
+  @include Responsive(smartphone) {
+    padding: 0 1rem;
+  }
+}
+.about__slogan {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.section--2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+  /*  padding: 1.8rem 0;
+  margin: 0 - 24px; */
+  img {
+    padding: 0.5rem;
+    width: 270px;
+    height: 300px;
+    @include Responsive(tablet) {
+      padding: 0;
+      width: 200px;
+      height: 250px;
+    }
+  }
+  @include Responsive(tablet) {
+    margin: 0 2rem;
+  }
+  @include Responsive(smartphone) {
+    margin: 0 2rem;
+    div:nth-child(1) {
+      display: none;
+    }
+    div:nth-child(3) {
+      display: none;
+    }
+    justify-content: center;
+  }
+}
+.about__letter {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  padding: 0 10rem;
+  @include Responsive(tablet) {
+    padding: 0 7rem;
+  }
+  @include Responsive(smartphone) {
+    padding: 0 3rem;
+  }
+}

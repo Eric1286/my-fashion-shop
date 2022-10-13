@@ -1,0 +1,68 @@
+@import "../../_variables.scss";
+.modal {
+  margin-top: $header--height;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.form__wrap {
+  position: absolute;
+  right: 50px;
+  padding: 2rem 2rem;
+  box-shadow: 0px 0px 1px 1px rgb(182, 175, 175);
+  border-radius: 10px;
+  background-color: white;
+  animation: openModal 1s linear forwards;
+  @include Responsive(smartphone) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 2.5rem 3.5rem;
+  }
+}
+.login__closeicon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 8px 11px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 50px;
+  background-color: map-get($color, main);
+  opacity: 1;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.form__question {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.link {
+  text-decoration: none;
+  color: blue;
+  font-weight: 300;
+  &:hover {
+    font-weight: 500;
+  }
+}
+@keyframes modalOpen {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+} ;

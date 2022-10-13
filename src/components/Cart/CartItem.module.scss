@@ -1,0 +1,48 @@
+@import "../../_variables.scss";
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.image__container {
+  width: 50%;
+  text-align: center;
+  img {
+    width: 180px;
+    height: 180px;
+    @include Responsive(smartphone) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+.item__info {
+  width: 50%;
+}
+.item__name {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.item__price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.btn {
+  button {
+    width: 2rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid white;
+      background-color: black;
+      color: white;
+    }
+  }
+}

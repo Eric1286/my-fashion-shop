@@ -1,0 +1,19 @@
+$color: (
+  main: #ee4266,
+);
+$header--height: 4.5rem;
+@mixin Responsive($device) {
+  @if $device==pc {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $device==tablet {
+    @media (min-width: 740px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $device== smartphone {
+    @media only screen and (max-width: 739px) {
+      @content;
+    }
+  }
+}

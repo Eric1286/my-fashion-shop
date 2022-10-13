@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;500;600;700&display=swap");
+@import "./_variables.scss";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Gantari", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+.nav-button {
+  font-size: 0.8rem;
+  font-style: 400;
+  padding: 6px 8px;
+  color: black;
+  background-color: white;
+  border: 1.5px solid black;
+  border-radius: 50px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    border: 1.5px solid white;
+    color: white;
+    background-color: black;
+  }
+}
+.icon {
+  color: map-get($color, main);
+  padding-right: 8px;
+}
+.main {
+  width: 100%;
+}
+.main__products {
+  padding-top: 2rem;
+}
+
+.bgr {
+  margin-top: $header--height;
+  //width: 100%;
+  height: 80vh;
+  background-image: url("./asset/bgr/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  .bgr__intro {
+    position: absolute;
+    top: 30vh;
+    left: 10vh;
+    color: whitesmoke;
+    opacity: 0;
+    text-shadow: 3px 3px rgba(41, 29, 29);
+    font-size: 2rem;
+    animation: textfly 4s forwards;
+    h3 {
+      font-weight: bold;
+      color: whitesmoke;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 300;
+      color: whitesmoke;
+      margin: 0;
+    }
+  }
+  @include Responsive(tablet) {
+    height: 40vh;
+    .bgr__intro {
+      top: 20vh;
+      left: 3%;
+    }
+  }
+
+  @include Responsive(smartphone) {
+    height: 40vh;
+    .bgr__intro {
+      top: 20vh;
+      left: 3%;
+      font-size: 1.2rem;
+    }
+  }
+}
+@keyframes textfly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mg {
+  margin-bottom: 1rem;
+}
+.form__title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: map-get($color, main);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.form__label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 3px;
+}
+.form__input {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  margin-bottom: 3px;
+  &::placeholder {
+    font-weight: 300;
+    font-family: "Gantari", sans-serif;
+  }
+}
+.form__errorMsg {
+  margin-top: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: red;
+  line-height: 1rem;
+}
+.form__submit__btn {
+  width: 100%;
+  padding: 8px 0;
+  font-family: "Gantari", sans-serif;
+  font-size: 1.1rem;
+  color: ivory;
+  background-color: map-get($color, main);
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+}

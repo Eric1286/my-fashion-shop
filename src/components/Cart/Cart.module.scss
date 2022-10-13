@@ -1,0 +1,25 @@
+@import "../../_variables.scss";
+.main__cart {
+  width: 90%;
+  margin: $header--height auto;
+}
+.item__list {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-left: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #333;
+}
+
+.total {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.note {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
