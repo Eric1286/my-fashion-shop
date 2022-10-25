@@ -27,46 +27,48 @@ const Header = () => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <div>
-          <FontAwesomeIcon
-            className={classes.icon}
-            icon="fa-solid fa-bars"
-            onClick={showMenuHandler}
-          />
-          <Link className={classes["nav__logo"]} to="/">
-            LALA COLLECTION
-          </Link>
-        </div>
-        <nav className={classes.nav}>
-          <ul>
-            <li>
-              <NavLink className={linkClass} to="/">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={linkClass} to="/products">
-                Products
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={linkClass} to="/about">
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={linkClass} to="/contact">
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          <LoginButton />
-          <Link to="/cart" className="nav-button">
-            <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-            <span> Cart ({totalAmount})</span>
-          </Link>
+        <div className={classes.container}>
+          <div>
+            <FontAwesomeIcon
+              className={classes.icon}
+              icon="fa-solid fa-bars"
+              onClick={showMenuHandler}
+            />
+            <Link className={classes["nav__logo"]} to="/">
+              LALA COLLECTION
+            </Link>
+          </div>
+          <nav className={classes.nav}>
+            <ul>
+              <li>
+                <NavLink className={linkClass} to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={linkClass} to="/products">
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={linkClass} to="/about">
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={linkClass} to="/contact">
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <LoginButton />
+            <Link to="/cart" className="nav-button">
+              <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+              <span> Cart ({totalAmount})</span>
+            </Link>
+          </div>
         </div>
       </header>
       {showMenu && <MobileUI onHideMenu={hideMenuHandler} />}

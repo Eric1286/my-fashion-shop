@@ -16,14 +16,20 @@
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 0 3rem;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  @include Responsive(tablet) {
+    width: 94%;
+  }
   @include Responsive(smartphone) {
     flex-direction: column;
+    width: 94%;
     align-items: center;
   }
 }
 .contact__message {
-  width: 47%;
+  width: 100%;
   padding: 2.5rem 3.5rem;
   border: 0.1px solid rgb(196, 192, 192);
   h3 {
@@ -35,7 +41,7 @@
   }
 }
 .contact__address {
-  width: 47%;
+  width: 100%;
   padding: 2.5rem 3.5rem;
   border: 0.1px solid rgb(196, 192, 192);
 }

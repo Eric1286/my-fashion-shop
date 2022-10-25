@@ -11,6 +11,17 @@ html {
 body {
   margin: 0;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  @include Responsive(tablet) {
+    width: 94%;
+  }
+  @include Responsive(smartphone) {
+    width: 94%;
+  }
+}
+
 .nav-button {
   font-size: 0.8rem;
   font-style: 400;

@@ -37,7 +37,7 @@ const Contact = () => {
     validateForm();
   };
   return (
-    <div className={classes.contact}>
+    <main className={classes.contact}>
       <div className={classes["contact__bgr"]}></div>
       <div className={classes.container}>
         <div className={classes["contact__message"]}>
@@ -86,7 +86,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default Contact;

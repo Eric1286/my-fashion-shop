@@ -3,8 +3,6 @@
   width: 100%;
   margin-top: 4rem;
   margin-bottom: 3rem;
-  padding-right: 3rem;
-  padding-left: 56px;
 
   h5 {
     font-size: 1.1rem;
@@ -16,12 +14,6 @@
       text-align: center;
     }
   }
-  @include Responsive(smartphone) {
-    padding: 0 2rem;
-  }
-  @include Responsive(tablet) {
-    padding: 0 2rem;
-  }
 }
 .footer__content {
   display: flex;
@@ -29,6 +21,8 @@
   align-items: flex-start;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgb(49, 48, 48);
+  @include Responsive(tablet) {
+  }
   @include Responsive(smartphone) {
     display: flex;
     flex-direction: column-reverse;
@@ -53,12 +47,11 @@
     font-weight: 300;
     &:hover {
       color: map-get($color, main);
+      cursor: pointer;
+      font-weight: 500;
     }
   }
-  &:hover {
-    cursor: pointer;
-    font-weight: 500;
-  }
+
   @include Responsive(smartphone) {
     text-align: center;
     width: 20rem;

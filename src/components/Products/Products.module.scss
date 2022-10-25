@@ -9,6 +9,16 @@
     letter-spacing: 2px;
   }
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  @include Responsive(tablet) {
+    width: 94%;
+  }
+  @include Responsive(smartphone) {
+    width: 94%;
+  }
+}
 .products__search {
   display: inline-flex;
   justify-content: space-between;
@@ -73,6 +83,6 @@
   color: white;
   border-radius: 10px;
 }
-.container {
+.mb {
   margin-bottom: 1rem;
 }

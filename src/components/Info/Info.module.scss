@@ -1,6 +1,14 @@
 @import "../../_variables.scss";
 .main {
   margin-top: $header--height;
+  width: 90%;
+  margin: 0 auto;
+  @include Responsive(tablet) {
+    width: 94%;
+  }
+  @include Responsive(smartphone) {
+    width: 94%;
+  }
 }
 
 .section--1 {
@@ -26,12 +34,8 @@
 .section--2 {
   display: flex;
   justify-content: space-between;
-  margin: 0 3rem;
-  /*  padding: 1.8rem 0;
-  margin: 0 - 24px; */
+
   img {
-    padding: 0.5rem;
-    width: 270px;
     height: 300px;
     @include Responsive(tablet) {
       padding: 0;
@@ -39,11 +43,8 @@
       height: 250px;
     }
   }
-  @include Responsive(tablet) {
-    margin: 0 2rem;
-  }
+
   @include Responsive(smartphone) {
-    margin: 0 2rem;
     div:nth-child(1) {
       display: none;
     }

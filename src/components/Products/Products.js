@@ -97,16 +97,16 @@ const Products = () => {
   );
   const loading = (
     <div>
-      <div className={classes.container}>
+      <div className={classes.mb}>
         <Skeleton height={100} width={900} />
       </div>
-      <div className={classes.container}>
+      <div className={classes.mb}>
         <Skeleton height={100} width={900} />
       </div>
-      <div className={classes.container}>
+      <div className={classes.mb}>
         <Skeleton height={100} width={900} />
       </div>
-      <div className={classes.container}>
+      <div className={classes.mb}>
         <Skeleton height={100} width={900} />
       </div>
     </div>
@@ -123,9 +123,11 @@ const Products = () => {
         />
       </div>
       {btnList}
-      {isLoading && loading}
-      {filteredItems.length === 0 && !isLoading && <h3>No items found!</h3>}
-      {!isLoading && <ProductList items={filteredItems} />}
+      <div className="container">
+        {isLoading && loading}
+        {filteredItems.length === 0 && !isLoading && <h3>No items found!</h3>}
+        {!isLoading && <ProductList items={filteredItems} />}
+      </div>
     </div>
   );
 };

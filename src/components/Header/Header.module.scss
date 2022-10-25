@@ -3,21 +3,28 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   width: 100%;
   height: $header--height;
-  padding: 0 3rem;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 20;
-  @include Responsive(smartphone) {
-    padding: 0 0.5rem;
+
+  .container {
+    width: 90%;
+    height: $header--height;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include Responsive(tablet) {
+      width: 94%;
+    }
+    @include Responsive(smartphone) {
+      width: 94%;
+    }
   }
-  @include Responsive(tablet) {
-    padding: 0 2rem;
-  }
+
   .nav__logo {
     font-size: 1.5rem;
     display: inline-block;
